@@ -1,0 +1,12 @@
+from sympy . solvers .pde import pdsolve
+from sympy import Function , Eq ,cot , classify_pde , pprint
+from sympy .abc import x, y, a
+f = Function ('f')
+z = f(x, y)
+zx = z.diff (x)
+zy = z.diff (y)
+eq = Eq(x*zx+y*zy , z)
+pprint (eq)
+print("\n")
+soln = pdsolve (eq ,z)
+pprint( soln )
