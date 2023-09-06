@@ -1,0 +1,11 @@
+from sympy.vector import*
+from sympy import symbols
+N=CoordSys3D('')
+f=N.x**2*(N.y**3)*(N.z**4)
+print("\n The Given scalar point function is\n")
+display(f)
+delop=Del()
+display(delop(f))
+gradf=gradient(f)
+print("\n Gradient of {f} is \n")
+display(gradf)
