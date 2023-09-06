@@ -1,0 +1,6 @@
+from sympy import*
+x=symbols('x')
+y=Function('y')(x)
+DE=Eq(Derivative(y,x,2)+2*Derivative(y,x)+y,x**2+2*x)
+GS=dsolve(DE)
+display(GS)
